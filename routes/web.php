@@ -25,7 +25,7 @@ Route::get('contacto/{nombre?}/{edad?}',function($nombre="Wendy",$edad=22){
 			"edad"=>$edad
 		));
 		*/
-	return view('contacto')
+	return view('contacto.contacto')
 		->with('nombre',$nombre)
 		->with('edad',$edad);
 })->where([
