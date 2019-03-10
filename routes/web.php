@@ -27,7 +27,8 @@ Route::get('contacto/{nombre?}/{edad?}',function($nombre="Wendy",$edad=null){
 		*/
 	return view('contacto.contacto')
 		->with('nombre',$nombre)
-		->with('edad',$edad);
+		->with('edad',$edad)
+		->with('frutas',array('naranja','manzana','frutilla','Piña','Pera'));
 })->where([
 		'nombre'=>'[A-Za-z]+',		//nombre de la A-z se puede repetir indefinidamente(+)
 		'edad'=>'[0-9]+'
