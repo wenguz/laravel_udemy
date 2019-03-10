@@ -18,7 +18,9 @@ Route::get('/', function () {
 Route::get('/hola-mundo',function(){
 	return 'Hola mundo: Bienvenido a laravel';
 });
-
-Route::get('/contacto',function(){
-	return view('contacto');
+//pasando parametro
+Route::get('contacto/{nombre}',function($nombre){
+	return view('contacto',array(
+			"nombre"=>$nombre
+		));
 });
