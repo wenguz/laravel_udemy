@@ -1,8 +1,13 @@
-<!--Forma basica para mostrar informacion en blade-->
-<h1>Pagina de contacto {{$nombre}}  {{$edad}}</h1>
-
 <!--otra forma para mostrar informacion en blade-->
-<h1>Pagina de contacto otro {!!$nombre!!}  {!!$edad!!}</h1>
+<h1>Pagina de contacto:  {!!$nombre!!} -
+<!--
+{{isset($edad) && !is_null($edad) ? $edad: 'No existe edad'}}
+-->
+</h1>
 
-<!--otra forma para mostrar informacion en blade con php-->
-<h1>Pagina de contacto con php <?=$nombre?>  <?=$edad?></h1>
+<!--condicional If-->
+@if(is_null($edad))
+	No existe la edad
+@else
+	Si existe la edad: {{$edad}}
+@endif
