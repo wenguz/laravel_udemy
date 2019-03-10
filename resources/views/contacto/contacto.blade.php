@@ -13,3 +13,8 @@ ternario: si existe edad y no es null mostrar edad sio mostrar mensaje
 @else
 	Si existe la edad: {{$edad}}
 @endif
+<br>
+<!--Bucle for-->
+@for($i=0;$i<=10;$i++)
+	{{$i}}<br>
+@endfor
