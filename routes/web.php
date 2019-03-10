@@ -19,7 +19,7 @@ Route::get('/hola-mundo',function(){
 	return 'Hola mundo: Bienvenido a laravel';
 });
 //pasando parametro
-Route::get('contacto/{nombre}',function($nombre){
+Route::get('contacto/{nombre?}',function($nombre="Wendy"){
 	return view('contacto',array(
 			"nombre"=>$nombre
 		));
