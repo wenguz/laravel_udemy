@@ -20,10 +20,14 @@ Route::get('/hola-mundo',function(){
 });
 //pasando parametro
 Route::get('contacto/{nombre?}/{edad?}',function($nombre="Wendy",$edad=22){
-	return view('contacto',array(
+	/*return view('contacto',array(
 			"nombre"=>$nombre,
 			"edad"=>$edad
 		));
+		*/
+	return view('contacto')
+		->with('nombre',$nombre)
+		->with('edad',$edad);
 })->where([
 		'nombre'=>'[A-Za-z]+',		//nombre de la A-z se puede repetir indefinidamente(+)
 		'edad'=>'[0-9]+'
