@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+//Ruta para mostrar una vista estatica
+Route::get('/hola-mundo',function(){
+	return 'Hola mundo: Bienvenido a laravel';
+});
+
+Route::get('/contacto',function(){
+	return view('contacto');
+});
