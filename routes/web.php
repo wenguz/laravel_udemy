@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-//Ruta para mostrar una vista estatica
+//Ruta para mostrar una vista estatica:se pone en el  buscador
 Route::get('/hola-mundo',function(){
 	return 'Hola mundo: Bienvenido a laravel';
 });
