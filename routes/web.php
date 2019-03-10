@@ -24,4 +24,7 @@ Route::get('contacto/{nombre?}/{edad?}',function($nombre="Wendy",$edad=22){
 			"nombre"=>$nombre,
 			"edad"=>$edad
 		));
-});
+})->where([
+		'nombre'=>'[A-Za-z]+',		//nombre de la A-z se puede repetir indefinidamente(+)
+		'edad'=>'[0-9]+'
+]);
