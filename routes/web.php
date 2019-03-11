@@ -41,7 +41,7 @@ Route::get('contacto/{nombre?}/{edad?}',function($nombre="Wendy",$edad=null){
 
 Route::get('products',function(){
 	return view('products.index'); //en views:carpeta products archivo index
-});
+})->name('products.index');
 
 Route::get('products/create',function(){
 	return view('products.create');//en views:carpeta products archivo create
