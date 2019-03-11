@@ -42,7 +42,9 @@ use Illuminate\Http\Request;
 use App\Product;
 
 Route::get('products',function(){
-	return view('products.index'); //en views:carpeta products archivo index
+	$products=Product::all();//obtiene todos los prductos de la BD
+	//en views:carpeta products archivo index
+	return view('products.index',compact('products'));
 })->name('products.index');
 
 Route::get('products/create',function(){
