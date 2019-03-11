@@ -39,6 +39,7 @@ Route::get('contacto/{nombre?}/{edad?}',function($nombre="Wendy",$edad=null){
 
 //RUTAS PARA EL PROYECTO TIENDA
 use Illuminate\Http\Request;
+use App\Product;
 
 Route::get('products',function(){
 	return view('products.index'); //en views:carpeta products archivo index
@@ -52,5 +53,9 @@ Route::get('products/create',function(){
 //para almacenar registros.noi importa q la url sea igual que ariba mientras el metodo sea diferente
 //el metodo request permite capturar lo que envia el formualario
 Route::post('products',function(Request $request){
-	return $request->all();
+	$newProduct=new Product;
+	$newProduct->description=$request->input('description'); //valor tabla =valor formualrio
+	$newProduct->price=$request->input('price');
+	$newProduct->save();
+	return redirect()->route('products.index');
 })->name('products.store');
