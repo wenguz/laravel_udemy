@@ -16,7 +16,12 @@
 				</div>
 			<!--fin titulo-->
 				<div class="card-body">
-				......
+				<!--Verificar si se almaceno  con with de rutas-->
+					@if(session('info'))
+						<div class="alert alert-success">
+							{{session('info')}}
+						</div>
+					@endif
 				</div>
 			</div>
 		</div>

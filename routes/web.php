@@ -57,5 +57,5 @@ Route::post('products',function(Request $request){
 	$newProduct->description=$request->input('description'); //valor tabla =valor formualrio
 	$newProduct->price=$request->input('price');
 	$newProduct->save();
-	return redirect()->route('products.index');
+	return redirect()->route('products.index')->with('info','Producto creado exitosamente');
 })->name('products.store');
