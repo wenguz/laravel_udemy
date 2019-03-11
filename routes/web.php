@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('welcome');
 });
@@ -25,6 +25,7 @@ Route::get('contacto/{nombre?}/{edad?}',function($nombre="Wendy",$edad=null){
 			"edad"=>$edad
 		));
 		*/
+		/*
 	return view('contacto.contacto')
 		->with('nombre',$nombre)
 		->with('edad',$edad)
@@ -33,3 +34,11 @@ Route::get('contacto/{nombre?}/{edad?}',function($nombre="Wendy",$edad=null){
 		'nombre'=>'[A-Za-z]+',		//nombre de la A-z se puede repetir indefinidamente(+)
 		'edad'=>'[0-9]+'
 ]);
+*/
+
+
+//RUTAS PARA EL PROYECTO TIENDA
+
+Route::get('products',function(){
+	return view('products.index'); //en views:carpeta products archivo index
+});
