@@ -42,3 +42,7 @@ Route::get('contacto/{nombre?}/{edad?}',function($nombre="Wendy",$edad=null){
 Route::get('products',function(){
 	return view('products.index'); //en views:carpeta products archivo index
 });
+
+Route::get('products/create',function(){
+	return view('products.create');//en views:carpeta products archivo create
+})->name('products.create');	//este names:sera con el quie se mande al clickear el boton nuevo producto en la vista index de prodcuts

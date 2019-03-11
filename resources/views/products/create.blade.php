@@ -11,8 +11,7 @@
 			<div class="card">
 			<!--inicio titulo-->
 				<div class="card-header">
-					Listado de productos
-					<a href="{{route('products.create')}}" class="btn btn-success btn-sm float-right">Nuevo producto</a>
+					Crear productos
 				</div>
 			<!--fin titulo-->
 				<div class="card-body">
