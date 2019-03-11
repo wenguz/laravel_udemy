@@ -45,4 +45,10 @@ Route::get('products',function(){
 
 Route::get('products/create',function(){
 	return view('products.create');//en views:carpeta products archivo create
-})->name('products.create');	//este names:sera con el quie se mande al clickear el boton nuevo producto en la vista index de prodcuts
+})->name('products.create');	//este names:sera con el quie se mande al clickear el boton nuevo producto en la vista index de prodcuts.Puede ser el que nosotros queramos
+
+
+//para almacenar registros.noi importa q la url sea igual que ariba mientras el metodo sea diferente
+Route::post('products',function(){
+	return 'Guardando Producto...';
+})->name('products.store');

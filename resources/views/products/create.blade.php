@@ -16,7 +16,8 @@
 			<!--fin titulo-->
 				<div class="card-body">
 				<!--Inicio formulario-->
-					<form action="">
+					<form action="{{route('products.store')}}" method="POST">
+					@csrf
 						<div class="form-group">
 							<label for="">Descripcion</label>
 							<!--mejor si el name tiene elmismo nombre que en la migracion-->
@@ -27,6 +28,7 @@
 							<input type="number" class="form-control" name="price"></input>
 						</div>
 						<button type="submit" class="btn btn-primary">Guardar</button>
+						<!--el href es el name asignado en las rutas web-->
 						<a href="{{route('products.index')}}" class="btn btn-danger">Cancelar</a>
 					</form>
 				<!--Fin formulario-->
