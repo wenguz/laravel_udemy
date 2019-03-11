@@ -38,6 +38,7 @@ Route::get('contacto/{nombre?}/{edad?}',function($nombre="Wendy",$edad=null){
 
 
 //RUTAS PARA EL PROYECTO TIENDA
+use Illuminate\Http\Request;
 
 Route::get('products',function(){
 	return view('products.index'); //en views:carpeta products archivo index
@@ -49,6 +50,7 @@ Route::get('products/create',function(){
 
 
 //para almacenar registros.noi importa q la url sea igual que ariba mientras el metodo sea diferente
-Route::post('products',function(){
-	return 'Guardando Producto...';
+//el metodo request permite capturar lo que envia el formualario
+Route::post('products',function(Request $request){
+	return $request->all();
 })->name('products.store');
